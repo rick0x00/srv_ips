@@ -10,6 +10,7 @@
 # Remote repository 2: https://gitlab.com/rick0x00/srv_ips     #
 # ============================================================ #
 # base content:
+#     https://www.the-art-of-web.com/system/fail2ban-filters/
 #   
 
 # ============================================================ #
