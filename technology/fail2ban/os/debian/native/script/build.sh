@@ -234,7 +234,7 @@ function configure_fail2ban() {
         maxretry = 3
         protocol = tcp, udp, icmp
         banaction = nftables[type=allports]
-        " >> /etc/fail2ban/jail.d/default.conf
+        " > /etc/fail2ban/jail.d/default.conf
 
         remove_space_from_beginning_of_line "8" "/etc/fail2ban/jail.d/default.conf"
 
@@ -247,7 +247,7 @@ function configure_fail2ban() {
         filter  = sshd
         logpath = %(sshd_log)s
         backend = %(sshd_backend)s
-        " >> /etc/fail2ban/jail.d/sshd.conf
+        " > /etc/fail2ban/jail.d/sshd.conf
 
         remove_space_from_beginning_of_line "8" "/etc/fail2ban/jail.d/sshd.conf"
 
@@ -304,7 +304,7 @@ function test_fail2ban () {
     # fail2ban not need listen
 
     # is creating logs ????
-    tail -f /var/log/fail2ban.log
+    tail /var/log/fail2ban.log
 
     # Validating...
     # the validations its possible using anothers Hosts
